@@ -21,7 +21,7 @@ var router = express.Router();              // get an instance of the express Ro
 
 router.get('/toggle', function(req, res) {
 
-    var wemoSwitch = new WeMo('10.10.10.113', '49153');
+    var wemoSwitch = new WeMo('IP', 'PORT');
     wemoSwitch.setBinaryState(0, function(err, result) {
         if (err) console.error(err);
         console.log(result); // 1
