@@ -9,5 +9,6 @@ keep motor going for a certain number of seconds, for example to open the courta
 The main idea is to controll the engine by voice using an amazon echo, with a custom skill
 and a lambda function connected to this api.
 
+Ended up writing this little api because tools like yonomi for android tend to lost their configuration pretty easily
 
 -Andres
