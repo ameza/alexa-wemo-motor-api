@@ -19,18 +19,9 @@ var router = express.Router();              // get an instance of the express Ro
 // test route to make sure everything is working (accessed at GET http://localhost:8080/api)
 
 
-function halfWindow(device) {
-
-
-}
-
-
-
-
 router.get('/toggle', function(req, res) {
 
-
-        var wemoSwitch = new WeMo('10.10.10.113', '49153');
+    var wemoSwitch = new WeMo('10.10.10.113', '49153');
     wemoSwitch.setBinaryState(0, function(err, result) {
         if (err) console.error(err);
         console.log(result); // 1
@@ -55,14 +46,9 @@ router.get('/toggle', function(req, res) {
 
     });
 
-
     res.json({ message: 'hooray! welcome to our api!' });
 });
 
-// more routes for our API will happen here
-
-// REGISTER OUR ROUTES -------------------------------
-// all of our routes will be prefixed with /api
 app.use('/courtains', router);
 
 // START THE SERVER
